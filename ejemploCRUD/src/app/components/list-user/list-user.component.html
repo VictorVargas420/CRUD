@@ -1,0 +1,38 @@
+<div class='container mt-5'>
+    <div class='row'>
+        <div class='col-lg-8 offset-lg-2'>
+            <div class='card'>
+                <div class='card-body text-center'>
+                    <span class="titulo"> LIST USERS </span>
+                    <button class="btn btn-success float-end" routerLink="/create-user"> NEW </button>
+                    <table *ngIf = "listUsuarios.length > 0" class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col"> ApellidoP </th>
+                            <th scope="col"> ApellidoM </th>
+                            <th scope="col"> Nombre(s) </th>
+                            <th scope="col"> Matricula </th>
+                            <th scope="col"> Equipo </th>
+                            <th scope="col"> </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let usuarios of listUsuarios">
+                            <td> {{ usuarios.apellidoP}} </td>
+                            <td> {{ usuarios.apellidoM}} </td>
+                            <td> {{ usuarios.nombre}} </td>
+                            <td> {{ usuarios.matricula}} </td>
+                            <td> {{ usuarios.equipo}} </td>
+                            <td> 
+                                <i [routerLink]="['/edit-user', usuarios._id]" class="fas fa-edit text-primary"></i>
+                                <i (click)="eliminarUsuario(usuarios._id)" class="fas fa-trash text-danger"></i> 
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: center; margin-top: 10px;" *ngIf = "listUsuarios.length == 0"> ¡NO HAY USUARIOS REGISTRADOS!</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
