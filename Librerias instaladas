@@ -1,0 +1,5 @@
+npm express
+npm bootstrap
+npm cors
+npm mongoose
+npm jquerry
