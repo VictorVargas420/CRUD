@@ -1,0 +1,4 @@
+Antes de ejecutar el servidor y el proyecto, debe abrirlos cada uno por separado usando ya sea Webstorm o Visual Code,
+abrir una terminal nueva y poner el siguiente comando npm i, el cual nos servira para instalar los proyectos,
+y despues ejecutar primero el servidor con el siguiente comando npm run dev, el cual hace que arranque el serivdor y la conexion a la BD
+Despues ir al del proyecto y ejecutar el comando ng serve -o y asi abrira la pagina con toda la bd ya conectada 
